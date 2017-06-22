@@ -21,13 +21,24 @@ namespace CSharp7Tuples
             //loop int array
             foreach (var v in values)
             {
-                //assign tuple with sum and count calculations
-                tuple = (tuple.sum + v, tuple.count + 1);
+                //you can assign directly a tuple with sum and count calculations
+                //tuple = (tuple.sum + v, tuple.count + 1);
+
+                //or you can use a local function
+                SumAndCount(v, 1);
             }
             
             //return tuple with final results
             return tuple;
-        }
+
+            //creates a local function for sum
+            void SumAndCount(int sum, int count)
+            {
+                Console.WriteLine($"Using SumAndCount(int {sum}, int {count}) local function...");
+                tuple.sum += sum;
+                tuple.count += count;
+            }
+        }//calculate
 
 
         static void Main(string[] args)
