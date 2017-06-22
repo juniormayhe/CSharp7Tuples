@@ -1,10 +1,5 @@
 ﻿using System;
 
-/*
-   
-                                           | |                
-                                           |_|                
- */
 namespace CSharp7Tuples
 {
     class Program
